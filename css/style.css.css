@@ -1,0 +1,315 @@
+
+* {
+    margin:0px;   padding:0;
+    box-sizing: border-box;
+ }
+
+* h1 {
+    font-family: 'Albert Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal ;
+ }
+ 
+ * h2 {
+    font-family: 'Albert Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal ;
+}
+
+* h3 {
+    font-family: 'Albert Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal ;
+}
+
+*h4 {
+    font-family: 'Albert Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+*h5 {
+    font-family: 'Albert Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+ * p {
+    font-family: 'Albert Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+ }
+
+
+ 
+/*HEADER: logo,navbar,links*/
+
+header img{
+   height: 80px;
+   padding: 0 0 0;
+}
+
+header {
+    background-color: snow;
+    height: 80px;
+    width:100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 5px 0 10px rgba(0,0, 0,.6);
+}
+
+nav ul {
+    font-family: 'Albert Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    display: flex
+}
+
+
+.name {
+    color: #371A45;
+    height: 70px;
+    display: flex;
+}
+
+.menuItems li {
+    margin: 0 10px;
+    font-size: 1.2rem;
+
+}
+
+nav ul li a :link {color: #371A45;} 
+
+nav ul li a :visited {color: #F35D4F;}
+
+nav ul li a :hover {color: #027D8D;}
+
+nav ul li a {text-decoration: none;}
+
+
+/*INDEX bodycover,fontname,p*/
+
+
+
+ .mainConteiner {
+    margin-top: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30em;
+}
+
+.bodyImgCover {
+    background-image: url(../assets/images/bodyImagCover.png);
+    background-size: cover;
+    margin-top:0px;
+    height: 100%;
+}
+
+.fontName {
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.whatWeDo {
+    padding-left: 50px;
+    color: #dfd3d1;
+    font-size: 2vw;
+}
+
+.ctaBox {
+margin-top: 20px;
+margin-left: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 12%;
+width: 19%;
+background-color: #F35D4F;
+
+}
+ .ctaItem {
+    text-decoration: none;
+    font-family: 'Albert Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+}
+
+/*HTML section*/
+
+.benefitBox {
+height: 20px;
+margin: 3em; 
+display: flex;
+justify-content: center;
+align-content: center;
+color: #371A45;
+}
+
+
+
+
+.containerGrid {
+    display: grid; 
+    outline: #F35D4F;
+    padding: 2%;
+    gap: 2em;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+ }
+
+.icon {
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon p {
+    height: 10px;
+    padding: 0.5em;
+    font-size: 105%;
+}
+
+.textStyle {
+
+    color: #F35D4F;
+    font-size: 105%;
+}
+
+/*FOOTER*/
+
+.boxFoter {
+    background-color: #21112B;
+    height: 20vh;
+    padding: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: azure;
+}
+
+
+.newsletter {
+    margin-bottom: 10px;
+    align-items: center;
+    font-size: 0.8em;
+}
+
+.contacto {
+    font-size: 0.8em;
+ 
+}
+
+.textoIcono {
+    padding: 0.1em;
+    align-items: center;
+}
+
+
+/*CURSOS*/
+
+.bodyImageCursos {
+    background-image: url(../assets/images/ImageCursos.png);
+    background-size: cover;
+    width: 100%;
+    height: 33em;
+    margin-top:0px;
+} 
+
+
+.cursosContainer {
+    margin: 10px;
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    color: #371A45;
+
+}
+
+.cursos{
+    padding: 5px;
+    flex-wrap: nowrap;
+    width: 20vw;
+    font-size: 0.7rem;
+}
+
+.cardsConteiner {
+    margin: 15%;
+    display: grid;
+    height: 80vh;
+    width: 40vw;
+    grid-template-columns: 40px 40px 40px;
+    grid-template-rows: 80px 80px 80px;
+    justify-content: center;
+    align-content: center;
+}
+
+/*Estilar contenido interno, agregar iconos reloj y puzzle*/
+
+.cardCursos {
+    margin: 25px;
+    padding-bottom: 15px;
+    background-color: #F1F1F1;
+    box-shadow:  5px 0 10px rgba(0,0, 0,.3);
+    width: 15em;
+    height: 18rem;
+    border-radius: 15px;
+    font-family: 'Albert Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cursosImages {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.cursosTitulo {
+    color: #21112B;
+    align-self: center;
+    padding: 2%;
+    height: 80%;
+    font-size: 80%;
+}
+
+about {
+    align-self: center;
+    width: 80%;
+    margin: 5px;
+    color: dimgray;
+}
+
+
+
+
+/*CONTACTO*/
+
+section .contactoConteiner {
+    height: 800px;
+}
+
+.contactoCover {
+    background-image: url(/assets/images/contactCover.png);
+    background-size: cover;
+    margin-top:0px;
+    width: 100%;
+    height: 600px;
+}
+
+ .contactoTitulo {
+    color: azure;
+}
+
+.formStyle {
+    height: 80%;
+    color: azure;
+    padding: 30px;
+}
