@@ -3,13 +3,28 @@
 const express = require ('express');
 const router = express.Router();                             //importamos enrutador
 const nodemailer = require ('nodemailer');
+const { body, validationResult } = require('express-validator'); 
 
+
+
+const validationForm = [ 
+    body("name")
+    .notEmpty().withMessage("Este campo es obligatorio")
+    .isLength({min:2, max:30}).withMessage("Debe ingresar entre ")
+]
+                       //arreglo p. errores de datos del form env por usuario
 
 router.get("/Contacto", (req,res) => {
     res.render("Contacto");
     })
 
-router.post("/Contacto", (req,res) => {
+router.post("/Contacto", validationForm, (req,res) => {
+    const errors = validationResult (req);
+    console.log(errors.array());
+    
+
+
+
     const {name, lastName, email, encuesta, message} = req.body //req body: contenido del cuerpo de la petición
     /*console.log(name);
     console.log(lastName);

@@ -39,7 +39,7 @@ app.get("/Becas",(req,res) => {
 res.render("Becas");
 })
 
-app.use("/Contacto", router)
+app.use("/", router)                          //dejar ruta "/" de lo contrario err nav. cannotget/Contacto
 
 
 /* //crear archivo err
