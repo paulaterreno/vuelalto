@@ -1,18 +1,21 @@
 "use strict";
 
 const path = require("path");
-const express = require ('express'); //o import express from "express";  +edit "type":"module" JSON
+const express = require ('express');                                     //o import express from "express";  +edit "type":"module" JSON
 const hbs = require ("express-handlebars");
 const { strict } = require("assert");
 const app = express();
 const PORT = 4242;
-const router = require ('./routes/form.js') //imp 
+const router = require ('./routes/form.js')                              //imp form
+require("./config/mongodb.js")
 
-app.engine(".hbs", hbs.engine({extname:"hbs"})) //mod. para evitar metodo import
+
+
+app.engine(".hbs", hbs.engine({extname:"hbs"}))                                        //mod. para evitar metodo import
 app.set('view engine', 'hbs');
 app.set('views', './views');
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.urlencoded()) //hab formato urlencoded para recibir data form
+app.use(express.urlencoded({extended:false}))                                          //hab formato urlencoded para recibir data form
 
 
 
@@ -25,6 +28,10 @@ app.listen(PORT, (err) => {
 
 app.get("/",(req,res) => {
 res.render("Inicio");
+})
+
+app.get("/Inicio", (req, res) => {
+res.render("Cursos"); //VER BOTON CTA
 })
 
 app.get("/Inicio",(req,res) => {
