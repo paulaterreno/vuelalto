@@ -13,7 +13,7 @@ require("./config/mongodb.js")
 
 app.engine(".hbs", hbs.engine({extname:"hbs"}))                                        //mod. para evitar metodo import
 app.set('view engine', 'hbs');
-app.set('views', './views');
+app.set('views', (path.join(__dirname,'./views')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended:false}))                                          //hab formato urlencoded para recibir data form
 
@@ -48,13 +48,15 @@ res.render("Becas");
 
 app.use("/", router)                          //dejar ruta "/" de lo contrario err nav. cannotget/Contacto
 
-
 /* //crear archivo err
 app.get("*" , (req,res) => {
 res.sendfile(__dirname +  '/public/images/404.jpg')
 }) 
 */
 
+app.use ("/users", require("./routes/usersRoutes"))
+
+/*SEGUIR 00:41*/
 
 
 
