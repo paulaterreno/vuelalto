@@ -1,0 +1,22 @@
+<nav> {{!-- VER #IF --}}
+    <ul>
+        {{#if user}}
+    <li>
+        <a href="/users/logout">Logout</a>
+    </li>    
+    <li>
+        <a href="/users/secret">Secret</a>
+    </li>
+     {{else}}
+    <li>
+        <a href="/users/login">Login</a>
+    </li>
+        <li>
+        <a href="/users/register">Register</a>
+    </li>
+     {{/if}}
+        <li>
+        <a href="/users/register">Home</a>
+    </li>
+    </ul>
+</nav>
