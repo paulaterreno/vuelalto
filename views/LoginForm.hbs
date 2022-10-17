@@ -11,7 +11,10 @@
     <input type="checkbox" class="form-check-input" id="chek">
     <label class="form-check-label" for="exampleCheck1">Mantenerme Conectado</label>
   </div>
-  <input type="submit" class="btn btn-success " value="Iniciar sesión" />
+    {{#if message}}
+    {{message}}
+    {{/if}}
+  <input type="submit" class="btn btn-success" value="Iniciar sesión" />
   {{!-- ¿QUE SUCEDE UNA VEZ Q INICIA SESIÓN? --}}
 <a href="/users/register" class="btn btn-warning">Registrarme</a>
 </form>

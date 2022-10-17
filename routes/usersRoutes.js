@@ -7,5 +7,13 @@ router.post("/login", users.postLoginForm)
 router.get("/register", users.getRegisterForm)
 router.post("/register", users.postRegisterForm)
 
+router.get("/settings", users.getSettings)                                      //confg de cuenta
+router.post("/settings", users.postSettings)                                     //procesamos form.
+
+router.get("/validate", users.validateEmail)
+
+router.get("/logout", users.logout)
+
+
 module.exports = router;
 

@@ -5,18 +5,24 @@
         <a href="/users/logout">Logout</a>
     </li>    
     <li>
-        <a href="/users/secret">Secret</a>
+        <a href="Acces">Acces</a>
     </li>
-     {{else}}
+    <div class="dropdown">
+  <a data-bs-toggle="dropdown" aria-expanded="false">
+   Cuenta
+  </a>
+    <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/users/settings">Configuración de cuenta</a></li>
+    <li><a class="dropdown-item" href="/users/validate">Validar Email</a></li>
+  </ul>
+</div>
+    </li>
+    {{else}}
     <li>
         <a href="/users/login">Login</a>
     </li>
         <li>
         <a href="/users/register">Register</a>
     </li>
-     {{/if}}
-        <li>
-        <a href="/users/register">Home</a>
-    </li>
-    </ul>
+    {{/if}}
 </nav>
