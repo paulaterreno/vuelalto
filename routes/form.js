@@ -10,14 +10,19 @@ router.get("/Contacto", (req,res) => {
     res.render("Contacto");
     })
 
-router.post("/Contacto", validationForm, async (req,res) => {
+router.post("/Contacto", validationForm, async (req,res) => {        //reg validacion se ejecutan antes de ir a la ruta
     const errors = validationResult (req); 
+    if (!errors.isEmpty()) {                                         //si el arreglo donde guardo las validaciones NO esta vacío
+        const validData = req.body                                   // validData objeto que trae inputs y su resp. de usuario
+        /*console.log(validData)*/                                   //array para rend form si hay errores + hacerlo visible al usuario
+        // const warningErr = errors.array();
+        const nameErr = warningErr.find(nameErr=>nameErr.param==="name")
+        const lastNameErr = warningErr.find(lastNameErr=>lastNameErr.param==="lastName")
+        const emailErr = warningErr.find(emailErr=>emailErr.param==="email")
+        const numberErr = warningErr.find(numberErr=>numberErr.param==="number")
 
-    if (!errors.isEmpty()) {
-        const validData = req.body                                     //array para rend form si hay errores + hacerlo visible al usuario
-        const warningErr = errors.array();
-        /*console.log(errors.array()); */                  
-        res.render("Contacto", {warningErr, validData})
+        /*console.log(errors.array());*/                 
+        res.render("Contacto", {warningErr, validData, nameErr, lastNameErr, emailErr, numberErr})
         } else { 
     const {name, lastName, email, encuesta, message} = req.body      //req body: contenido del cuerpo de la petición
     /*console.log(name);
@@ -41,14 +46,15 @@ const transport = nodemailer.createTransport ({
     })
 
 const mailStatus = await transport.sendMail(eMessage);            //instruc. avoid mailStatus undefined
-let mailFeedbak = "";
+console.log(mailStatus);
+let mailFeedback = "";
 if (mailStatus.rejected.length) {
-    mailFeedbak = "Su mensaje no pudo ser enviado";
+    mailFeedback = "Su mensaje no pudo ser enviado";
     } else {
-    mailFeedbak = "Mensaje enviado correctamente";    
+    mailFeedback = "Mensaje enviado correctamente";    
     }
 
-    res.render("Contacto", {message: mailFeedbak})             //! TO CHEK RES.RENDER() RESP FORM + VALID. FRONT
+    res.render("Contacto", {message: mailFeedback})             //! TO CHEK RES.RENDER() RESP FORM + VALID. FRONT
 }
 
 })

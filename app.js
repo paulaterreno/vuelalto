@@ -39,12 +39,9 @@ app.get("/",(req,res) => {
 res.render("Inicio", {user: req.session.user});
 })
 
-/*app.get("/Inicio", (req, res) => {
-res.render("Cursos"); //VER BOTON CTA
-})*/
 
 app.get("/Inicio",(req,res) => {
-    res.render("Inicio");                    //agregamos login de sesión en inicio
+    res.render("Inicio");                                                              //agregamos login de sesión en inicio
     })  
 
 app.get("/Cursos",(req,res) => {
@@ -67,16 +64,12 @@ app.use ("/users", require("./routes/usersRoutes"))
 
 app.get("/AuthDenied", (req,res) => {
     res.render("AuthDenied")          //chek
-}
-)
+})
 
-
-
-/* //crear archivo err
 app.get("*" , (req,res) => {
-res.sendfile(__dirname +  '/public/images/404.jpg')
+res.render("Error404")
 }) 
-*/
+
 
 
 

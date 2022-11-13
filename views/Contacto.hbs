@@ -1,32 +1,71 @@
 <body>
-    <div class="contactoTitulo"><h1>Ponte en Contacto</h1></div>
-        <div class="formStyle">
-            <form action="/Contacto" method="POST"> 
-            <!--Agregar en input atributo name="" p/func. correcto form -->
-                <label for="name"> Nombre </label> 
-                <input type="text" id="name" name="name" placeholder="Ingrese su nombre" value = "{{validData.name}}">
-                <label for="lastName">Apellido</label>
-                <input type="text" id="lastName" name="lastName" placeholder="Ingrese su apellido" value = "{{validData.lastName}}">
-                <label for="email">Correo Electrónico</label>
-                <input type="text" id="email" name="email" placeholder="Ingrese correo electrónico" value= "{{validData.email}}">
-                <label for="number">Número Telefónico</label>
-                <input type="number" id="number" name="number" placeholder="Ingrese número de contacto" value = "{{validData.number}}">
-                ¿Cómo nos conociste?: 
-                <select id="encuesta" name="encuesta">
-                    <option>Pagina Web</option>
-                    <option>Redes Sociales</option>
-                    <option>Publicidad</option>
-                    <option>Recomendación</option>
-                    <option>Otros</option>
-                    </select>
-                <label for="message"> Ingrese su mensaje </label>
-                <textarea name="message" id="message" cols="30" rows="10" "{{validData.message}}"> </textarea>
-            <input type="submit" value="Enviar"> 
-        </form>
-    {{#each warningErr}}                                                   {{!visualizamos msj de validaciones de formulario p. usuario}}
+<!--Agregar en input atributo name="" p/func. correcto form -->
+<div class="contactoTitulo"><h1>Ponte en Contacto</h1></div>
+<form action ="/Contacto" method="POST" class="row g-3">
+  <div class="col-md-6">
+    <label for="name" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="name" name="name"  value = >
+    <span id="errors">
+      {{#if nameErr}}
+      <div> {{nameErr.msg}} </div>
+      {{/if}}
+    </span>
+  </div>
+  <div class="col-md-6">
+    <label for="lastName" class="form-label">Apellido</label>
+    <input type="text" class="form-control" id="lastName" name="lastName" value = "{{validData.lastName}}">
+      <span id="errors">
+      {{#if lastNameErr.msg}}
+      <div> {{nameErr.msg}} </div>
+      {{/if}}
+    </span>
+  </div>
+  <div class="col-12">
+    <label for="email" class="form-label">Correo Electrónico</label>
+    <input type="text" class="form-control" id="email" name="email"  value= "{{validData.email}}">
+      <span id="errors">
+      {{#if emailErr}}
+      <div> {{emailErr.msg}} </div>
+      {{/if}}
+    </span>
+  </div>
+  <div class="col-md-6">
+    <label for="number" class="form-label">Número Telefónico</label>
+    <input type="number" class="form-control"  id="number" name="number" value = "{{validData.number}}">
+      <span id="errors">
+      {{#if numberErr}}
+      <div> {{numberErr.msg}} </div>
+      {{/if}}
+    </span>
+  </div>
+  <div class="col-md-4">
+    <label for="encuesta" class="form-label">¿Cómo nos conociste?</label>
+    <select id="encuesta" name="encuesta" class="form-select">
+    <option selected>Página Web</option>
+    <option>Redes Sociales</option>
+    <option>Recomendación</option>
+    <option>Otros</option>
+    </select>
+  </div>
+  <div class="mb-3">
+  <label for="message" class="form-label">Ingrese su mensaje</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" "{{validData.message}}"></textarea>
+        {{#if numberErr}} 
+      <div> {{numberErr.msg}} </div>
+      {{/if}}
+  <div class="col-12">
+    <button type="submit" value="Enviar" class="btn btn-primary">Enviar</button>
+  </div>
+</form>
+{{!--      {{#each warningErr}}                                                   {{!visualizamos msj de validaciones de formulario p. usuario}}
     <p>{{msg}}</p>
     {{/each}}
     </div>
-    </section>
+    </section> --}}
 </body>
 </html>
+
+
+
+
+

@@ -53,7 +53,7 @@ header img {
 header {
     background-color: snow;
     height: 80px;
-    width:100vw;
+    width:100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,6 +67,7 @@ nav ul {
     list-style: none;
     display: flex
 }
+
 
 
 .name {
@@ -189,8 +190,13 @@ color: #371A45;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    align-content: center;
+    justify-content: space-around;
     color: azure;
+}
+
+.contacto {
+    align-items: center;
 }
 
 
@@ -216,7 +222,7 @@ color: #371A45;
 .bodyImageCursos {
     background-image: url(images/imageCursos.png);
     background-size: cover;
-    width: 100%;
+    width: 90%;
     height: 33em;
     margin-top:0px;
 } 
@@ -334,3 +340,55 @@ section .contactoConteiner {
     height: 100%;
     }
     } */
+
+
+/*Error404 y AuthDenied*/
+
+.err404{
+    background-color: #21112B;
+     background-image: url(../images/404.jpg); 
+    background-repeat: no-repeat;
+    background-size:contain;
+    width: 100%;
+    height:53em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.errImg{
+    background-size: cover;
+    width:100%;
+
+}
+
+.btn-light {
+    align-self: center;
+    margin-top: 50%;
+    padding: 2%;
+}
+.authDenied {
+    background-color: #21112B;
+    background-image: url(../images/AuthDenied.jpg); 
+    background-repeat: no-repeat;
+    background-size:contain;
+    width: 100%;
+    height:53em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+/* .containerErr {
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+    height: 80px;
+}
+
+.Error404 {
+    background-size: cover;
+    height: auto;
+    width:100%
+} */

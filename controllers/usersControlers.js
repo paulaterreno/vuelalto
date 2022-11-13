@@ -10,7 +10,7 @@ function getLoginForm(req, res, next) {
     };
 
 
-/*AQUÍ SE PROCESA LOGGIN + INTERRACIÓN CON BASE DE DATOS*/
+/*AQUÍ SE PROCESA LOGGIN + INTERRACCIÓN CON BASE DE DATOS*/
     async function postLoginForm(req, res, next) {                 //capturamos los datos del form p loggin
     const { email, pass } = req.body;
     const user = await User.find().where({ email })                //consultamos a base de datos si coincide con algun email en la db
