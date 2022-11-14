@@ -7,7 +7,7 @@ router.get("/", (req, res) =>{
     res.render("home")
 });
 
-router.post("/", (req, res) =>{
+router.post("/", (req, res) => {
     
     const { nombre, apellido, email, password, mensaje} = req.body
     const emailMsg = {

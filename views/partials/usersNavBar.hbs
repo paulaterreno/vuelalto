@@ -1,10 +1,10 @@
-<nav>
-    <ul>
+<nav class="userNavBar">
+    <ul class=".helloUser">
         {{#if user}}
-    <li>
+    <li class="logItems">
         <a href="/users/logout">Logout</a>
     </li>    
-    <li>
+    <li class="logItems">
         <a href="/Acces">Acces</a>
     </li>
     <div class="dropdown">
@@ -18,10 +18,10 @@
 </div>
     </li>
     {{else}}
-    <li>
+    <li class="logItems">
         <a href="/users/login">Login</a>
     </li>
-        <li>
+        <li class="logItems" >
         <a href="/users/register">Register</a>
     </li>
     {{/if}}

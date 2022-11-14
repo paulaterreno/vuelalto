@@ -58,7 +58,7 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 5px 0 10px rgba(0,0, 0,.6);
-    overflow: hidden;
+    overflow: visible;
 }
 
 nav ul {
@@ -86,9 +86,34 @@ nav ul li a :link {color: #371A45;}
 
 nav ul li a :visited {color: #F35D4F;}
 
-nav ul li a :hover {color: #027D8D;}
+nav ul li a :hover {color: #371A45;}
 
 nav ul li a {text-decoration: none;}
+
+.userNavBar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+
+.logItems {
+    margin:5px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: medium;
+    justify-content: space-between;
+    
+}
+
+.dropdown {   
+    margin:5px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: medium;
+    justify-content: space-between;
+}
+
 
 
 /*INDEX bodycover,fontname,p*/
@@ -129,7 +154,9 @@ align-items: center;
 justify-content: center;
 height: 12%;
 width: 19%;
-background-color: #F35D4F;
+font-weight: bolder;
+background-color: #dfd3d1;
+border-radius: 30px;
 
 }
 
@@ -191,7 +218,7 @@ color: #371A45;
     flex-direction: row;
     align-items: center;
     align-content: center;
-    justify-content: space-around;
+    justify-content: space-between;
     color: azure;
 }
 
@@ -220,16 +247,16 @@ color: #371A45;
 /*CURSOS*/
 
 .bodyImageCursos {
-    background-image: url(images/imageCursos.png);
+    background-image: url(../images/imageCursos.png);
     background-size: cover;
-    width: 90%;
+    width: 100%;
     height: 33em;
     margin-top:0px;
 } 
 
 
 .cursosContainer {
-    margin: 10px;
+    margin: 20px;
     display: inline-flex;
     flex-direction: row;
     width: 100%;
@@ -246,13 +273,12 @@ color: #371A45;
 }
 
 .cardsConteiner {
+    display: flex;
+    flex-direction: row;
     margin: 15%;
-    display: grid;
     height: 80vh;
     width: 40vw;
-    grid-template-columns: 40px 40px 40px;
-    grid-template-rows: 80px 80px 80px;
-    justify-content: center;
+    justify-content: space-around;
     align-content: center;
 }
 
@@ -260,11 +286,10 @@ color: #371A45;
 
 .cardCursos {
     margin: 25px;
-    padding-bottom: 15px;
     background-color: #F1F1F1;
     box-shadow:  5px 0 10px rgba(0,0, 0,.3);
     width: 15em;
-    height: 18rem;
+    height: 30rem;
     border-radius: 15px;
     font-family: 'Albert Sans', sans-serif;
     font-family: 'Montserrat', sans-serif;
@@ -272,6 +297,7 @@ color: #371A45;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: auto;
 }
 
 .cursosImages {
@@ -283,7 +309,6 @@ color: #371A45;
     color: #21112B;
     align-self: center;
     padding: 2%;
-    height: 80%;
     font-size: 80%;
 }
 
@@ -304,7 +329,7 @@ section .contactoConteiner {
 }
 
 .contactoCover {
-    background-image: url(images/contactCover.png); /*NO FUNCIONA COVER*/
+    background-image: url(../images/contactCover.png); /*NO FUNCIONA COVER*/
     margin-top:0px;
     width: 100%;
     height: 600px;
@@ -326,20 +351,6 @@ section .contactoConteiner {
 }
 
 
-/*LOGIN FORM
-.bg-image-vertical {
-    position: relative;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: auto 100%;
-    }
-    
-    @media (min-width: 1025px) {
-    .h-custom-2 {
-    height: 100%;
-    }
-    } */
 
 
 /*Error404 y AuthDenied*/
@@ -379,16 +390,34 @@ section .contactoConteiner {
     text-align: center;
 
 }
-/* .containerErr {
-    display:flex;
-    flex-direction: row;
-    justify-content:center;
-    align-items:center;
-    height: 80px;
+
+
+/*FORMS: Register, Login, Cuenta*/
+
+.validErr {
+    text-decoration-color: #F35D4F;
+    color: #F35D4F;
 }
 
-.Error404 {
-    background-size: cover;
-    height: auto;
-    width:100%
-} */
+.form-label {
+    font-weight: bold;
+    color: #371A45;
+    
+}
+
+.loginForm {
+    margin-top: 2%;
+    margin-bottom: 12%;
+}
+
+.containerCuenta {
+    margin-top: 2%;
+    margin-bottom: 20%;
+    margin-left: 10px;
+}
+
+.editUserForm  {
+    margin-top: 2%;
+    margin-bottom: 10%;
+}
+

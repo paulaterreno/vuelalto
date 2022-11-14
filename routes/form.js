@@ -15,14 +15,15 @@ router.post("/Contacto", validationForm, async (req,res) => {        //reg valid
     if (!errors.isEmpty()) {                                         //si el arreglo donde guardo las validaciones NO esta vacío
         const validData = req.body                                   // validData objeto que trae inputs y su resp. de usuario
         /*console.log(validData)*/                                   //array para rend form si hay errores + hacerlo visible al usuario
-        // const warningErr = errors.array();
+        const warningErr = errors.array();
         const nameErr = warningErr.find(nameErr=>nameErr.param==="name")
         const lastNameErr = warningErr.find(lastNameErr=>lastNameErr.param==="lastName")
         const emailErr = warningErr.find(emailErr=>emailErr.param==="email")
         const numberErr = warningErr.find(numberErr=>numberErr.param==="number")
+        const msjErr = warningErr.find(msjErr=>msjErr.param==="message")
 
         /*console.log(errors.array());*/                 
-        res.render("Contacto", {warningErr, validData, nameErr, lastNameErr, emailErr, numberErr})
+        res.render("Contacto", {warningErr, validData, nameErr, lastNameErr, emailErr, numberErr, msjErr})
         } else { 
     const {name, lastName, email, encuesta, message} = req.body      //req body: contenido del cuerpo de la petición
     /*console.log(name);

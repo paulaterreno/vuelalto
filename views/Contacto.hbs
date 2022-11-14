@@ -7,7 +7,7 @@
     <input type="text" class="form-control" id="name" name="name"  value = >
     <span id="errors">
       {{#if nameErr}}
-      <div> {{nameErr.msg}} </div>
+      <div class="validErr"> {{nameErr.msg}} </div>
       {{/if}}
     </span>
   </div>
@@ -16,7 +16,7 @@
     <input type="text" class="form-control" id="lastName" name="lastName" value = "{{validData.lastName}}">
       <span id="errors">
       {{#if lastNameErr.msg}}
-      <div> {{nameErr.msg}} </div>
+      <div  class="validErr"> {{nameErr.msg}} </div>
       {{/if}}
     </span>
   </div>
@@ -25,7 +25,7 @@
     <input type="text" class="form-control" id="email" name="email"  value= "{{validData.email}}">
       <span id="errors">
       {{#if emailErr}}
-      <div> {{emailErr.msg}} </div>
+      <div class="validErr"> {{emailErr.msg}} </div>
       {{/if}}
     </span>
   </div>
@@ -34,7 +34,7 @@
     <input type="number" class="form-control"  id="number" name="number" value = "{{validData.number}}">
       <span id="errors">
       {{#if numberErr}}
-      <div> {{numberErr.msg}} </div>
+      <div  class="validErr"> {{numberErr.msg}} </div>
       {{/if}}
     </span>
   </div>
@@ -50,9 +50,9 @@
   <div class="mb-3">
   <label for="message" class="form-label">Ingrese su mensaje</label>
   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" "{{validData.message}}"></textarea>
-        {{#if numberErr}} 
-      <div> {{numberErr.msg}} </div>
-      {{/if}}
+{{!--         {{#if msjErr}} 
+      <div  class="validErr"> {{msjErr.msg}} </div>
+      {{/if}} --}}
   <div class="col-12">
     <button type="submit" value="Enviar" class="btn btn-primary">Enviar</button>
   </div>

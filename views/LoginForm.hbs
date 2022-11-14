@@ -1,4 +1,5 @@
-<form action="/users/login" method="POST">
+<div class="loginForm">
+  <form action="/users/login" method="POST">
   <div class="mb-3">
     <label for="user" class="form-label">Dirección de email</label>
     <input  name="email" type="text" class="form-control" id="email" aria-describedby="emailHelp">
@@ -16,6 +17,11 @@
     {{message}}
     </div>
     {{/if}}
-  <input type="submit" class="btn btn-success" value="Iniciar sesión" />
+  <input type="submit" class="btn btn-primary" value="Iniciar sesión" />
 <a href="/users/register" class="btn btn-warning">Registrarme</a>
 </form>
+</div>
+<footer>
+  {{footer}}
+</footer>
+
