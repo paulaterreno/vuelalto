@@ -7,9 +7,9 @@ router.get("/", (req, res) =>{
     res.render("home")
 });
 
-router.post("/", (req, res) => {
-    
-    const { nombre, apellido, email, password, mensaje} = req.body
+router.post("/", async (req, res) => {
+    const { name, lastName, email, number, password, menssage} = req.body
+    console.log(name, lastName, email, number, password, menssage)
     const emailMsg = {
         to: "24martin94@gmail.com",
         from: email,
@@ -26,9 +26,9 @@ router.post("/", (req, res) => {
         }
       });
 
-    transport.sendMail(emailMsg)
+    await transport.sendMail(emailMsg)
 
-    res.render("home", {mensaje: "Mensaje enviado"})
+    res.render("Inicio", {mensaje: "Mensaje enviado"})
     
     console.log("Entro un formulario");
 });

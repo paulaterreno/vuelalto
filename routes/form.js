@@ -24,8 +24,9 @@ router.post("/Contacto", validationForm, async (req,res) => {        //reg valid
 
         /*console.log(errors.array());*/                 
         res.render("Contacto", {warningErr, validData, nameErr, lastNameErr, emailErr, numberErr, msjErr})
-        } else { 
-    const {name, lastName, email, encuesta, message} = req.body      //req body: contenido del cuerpo de la petición
+        } else return next()
+        {
+    const {name, lastName, email, number, encuesta, message} = req.body      //req body: contenido del cuerpo de la petición
     /*console.log(name);
     console.log(lastName);
     console.log(email);
